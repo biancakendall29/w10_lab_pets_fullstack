@@ -33,10 +33,14 @@ const PetContainer = () => {
         setPets(pets.filter(pet => pet.id !== id));
     }
 
+    const searchForPet = (type) => {
+        setPets(pets.filter(pet => pet.type === type));
+    }
+
 
     return (
         <>
-            <NavBar />
+            <NavBar searchForPet={searchForPet}/>
             <NewPetForm postPet={postPet}/>
             <PetList pets={pets} deletePet={deletePet}/>
         </>    

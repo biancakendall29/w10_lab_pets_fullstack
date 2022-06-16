@@ -24,7 +24,7 @@ const NewPetForm = ({postPet}) => {
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
+        <form id="form" onSubmit={handleFormSubmit}>
             <h2>Add a new pet:</h2>
             <label>Pet Name</label>
             <input type="text" placeholder="Name" name="name" onChange={handleChange} value={statePet.name}/>

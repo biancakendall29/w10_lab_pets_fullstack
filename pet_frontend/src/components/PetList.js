@@ -8,12 +8,12 @@ const PetList = ({pets, deletePet}) => {
     console.log(petComponents);
 
     return (
-        <>
+        <div id="petList">
             <h1>All Pets</h1>
             <hr/>
             <hr />
             {petComponents}
-        </>
+        </div>
     );
 
 }
