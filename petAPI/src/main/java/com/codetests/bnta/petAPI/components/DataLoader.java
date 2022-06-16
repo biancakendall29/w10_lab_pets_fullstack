@@ -21,5 +21,23 @@ public class DataLoader implements ApplicationRunner {
 
         Pet poppy = new Pet("Poppy", "Dog", "Springer Spaniel", 4);
         petRepository.save(poppy);
+
+        Pet josie = new Pet("Josie", "Cat", "Tabby", 6);
+        petRepository.save(josie);
+
+        Pet fluffy = new Pet("Fluffy", "Rabbit", "Angora", 1);
+        petRepository.save(fluffy);
+
+        Pet chester = new Pet("Chester", "Dog", "Beagle", 2);
+        petRepository.save(chester);
+
+        Pet sushi = new Pet("Sushi", "Fish", "Goldfish", 1);
+        petRepository.save(sushi);
+
+        Pet lila = new Pet("Lila", "Cat", "Siamese", 6);
+        petRepository.save(lila);
+
+        Pet basil = new Pet("Basil", "Dog", "Basset Hound", 10);
+        petRepository.save(basil);
     }
 }

@@ -13,12 +13,32 @@ const PetContainer = () => {
             .then(data => setPets(data))
     }, []);
 
+    const postPet = (newPet) => {
+        fetch("http://localhost:8081/pets",
+            {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(newPet)
+            })
+            .then(response => response.json())
+            .then(data => setPets([...pets, data]))
+    }
+
+    const deletePet = (id) => {
+        fetch("http://localhost:8081/pets/" + id,
+        {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"}
+        })
+        setPets(pets.filter(pet => pet.id !== id));
+    }
+
 
     return (
         <>
             <NavBar />
-            <NewPetForm />
-            <PetList pets={pets}/>
+            <NewPetForm postPet={postPet}/>
+            <PetList pets={pets} deletePet={deletePet}/>
         </>    
     );
 
