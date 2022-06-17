@@ -34,7 +34,7 @@ const NewPetForm = ({postPet}) => {
             <input type="text" placeholder="Type" name="type" onChange={handleChange} value={statePet.type} />
             <label>Pet Breed</label>
             <input type="text" placeholder="Breed" name="breed" onChange={handleChange} value={statePet.breed}/>
-            <button type="submit">ADD</button>
+            <button id="add" type="submit">ADD</button>
         </form>
     );
 

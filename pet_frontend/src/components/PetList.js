@@ -8,11 +8,11 @@ const PetList = ({pets, deletePet}) => {
     console.log(petComponents);
 
     return (
-        <div id="petList">
+        <div id="pet-list">
             <h1>All Pets</h1>
-            <hr/>
-            <hr />
+            <ul>
             {petComponents}
+            </ul>
         </div>
     );
 

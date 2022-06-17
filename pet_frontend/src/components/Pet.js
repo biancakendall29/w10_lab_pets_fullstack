@@ -5,14 +5,15 @@ const Pet = ({pet, deletePet}) => {
     }
 
     return (
-        <>
+        <div id="pet-card">
+            <li>
             <h2>{pet.type}</h2>
             <h3>Name: {pet.name}</h3>
             <p>Age: {pet.age}</p>
             <p>Breed: {pet.breed}</p>
-            <button onClick={handleClick}>Remove Pet</button>
-            <hr/>
-        </>    
+            <button id="remove" onClick={handleClick}>Remove Pet</button>
+            </li>
+        </div>    
     );
 
 }
